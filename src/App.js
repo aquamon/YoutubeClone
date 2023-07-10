@@ -1,9 +1,12 @@
 import './App.css';
+import Header from './components/Header';
+import Body from './components/Body';
 
 function App() {
   return (
     <div>
-      <h1 className='bg-red-900 font-bold m-2 p-2'>React App</h1>
+      <Header/>
+      <Body/>
     </div>
   );
 }
