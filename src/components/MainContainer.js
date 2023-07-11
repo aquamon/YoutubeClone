@@ -1,15 +1,13 @@
-import React from 'react';
-import ButtonList from './ButtonList';
-import VideosContainer from './VideosContainer';
+import React from "react";
+import ButtonList from "./ButtonList";
+import VideosContainer from "./VideosContainer";
 const MainContainer = () => {
   return (
     <div className="">
-        MainContainer
-        <ButtonList/>
-        <VideosContainer/>
-
+      <ButtonList />
+      <VideosContainer />
     </div>
-  )
-}
+  );
+};
 
-export default MainContainer
+export default MainContainer;

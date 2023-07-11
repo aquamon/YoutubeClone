@@ -1,15 +1,14 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import store from '../utils/store'
+import React from "react";
+import { useSelector } from "react-redux";
+import store from "../utils/store";
 
 const Sidebar = () => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
-  const isMenuOpen = useSelector(store => store.app.isMenuOpen);
-  
-  if(!isMenuOpen) return null;
-  
+  if (!isMenuOpen) return null; //Early Return
+
   return (
-    <div className='shadow-lg w-48 p-5'>
+    <div className="shadow-lg w-48 p-5">
       <ul>
         <li>Home</li>
         <li>Shorts</li>
@@ -31,7 +30,7 @@ const Sidebar = () => {
         <li>Travel</li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
