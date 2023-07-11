@@ -3,7 +3,7 @@ import ButtonList from './ButtonList';
 import VideosContainer from './VideosContainer';
 const MainContainer = () => {
   return (
-    <div>
+    <div className="">
         MainContainer
         <ButtonList/>
         <VideosContainer/>

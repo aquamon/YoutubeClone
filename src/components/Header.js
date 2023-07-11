@@ -1,12 +1,20 @@
 import React from 'react'
 import Hamburger from '../../src/assets/images/hamburger.png'
 import YoutubeLogo from '../../src/assets/images/yout.png'
+import { useDispatch } from 'react-redux'
+import { toggleMenu } from '../utils/appSlice'
 const Header = () => {
+
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = ()=>{
+    dispatch(toggleMenu());
+  }
   return (
     <div className='p-2 m-2 grid grid-flow-col shadow-lg'>
         <div className='flex col-span-1'>
-            <img className='h-7' alt="hamburger-icon" src={Hamburger}/>
-            <img className='h-8 mx-2' alt="youtube-logo" src={YoutubeLogo}/>
+            <img onClick={()=>toggleMenuHandler()} className='h-7 cursor-pointer' alt="hamburger-icon" src={Hamburger}/>
+            <img className='h-8 mx-2 cursor-pointer' alt="youtube-logo" src={YoutubeLogo}/>
         </div>
         <div className='col-span-10'>
             <input className="p-2 w-1/2 ml-20  border border-gray-400 rounded-l-full" type="text"/>
