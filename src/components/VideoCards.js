@@ -14,11 +14,13 @@ const VideoCards = ({ info }) => {
         alt="thumbnail"
         src={info?.snippet?.thumbnails.medium.url}
       />
-      <h1 className="font-bold">{info?.snippet?.title}</h1>
-      <h2>{info?.snippet?.channelTitle}</h2>
-      <p>{info?.statistics.viewCount} views</p>
+      <ul>
+        <li className="font-bold">{info?.snippet?.title}</li>
+        <li className="mt-2">{info?.snippet?.channelTitle}</li>
+        <li>{info?.statistics.viewCount} views</li>
+      </ul>
     </div>
-  );
+  )
 };
 
 export default VideoCards;

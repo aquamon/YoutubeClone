@@ -18,11 +18,13 @@ const Header = () => {
           alt="hamburger-icon"
           src={Hamburger}
         />
-        <img
-          className="h-8 mx-2 cursor-pointer"
-          alt="youtube-logo"
-          src={YoutubeLogo}
-        />
+        <a href="/">
+          <img
+            className="h-8 mx-2 cursor-pointer"
+            alt="youtube-logo"
+            src={YoutubeLogo}
+          />
+        </a>
       </div>
       <div className="col-span-10">
         <input
