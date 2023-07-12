@@ -9,7 +9,7 @@ const Sidebar = () => {
   if (!isMenuOpen) return null; //Early Return
 
   return (
-    <div className="shadow-lg w-48 p-5 z-10 bg-white">
+    <div className="shadow-lg w-48 p-5  bg-white">
       <ul>
         <Link to="/">
           <li>Home</li>

@@ -43,7 +43,7 @@ const Header = () => {
     dispatch(toggleMenu());
   };
   return (
-    <div className="p-2 m-2 grid grid-flow-col shadow-lg">
+    <div className="p-2  grid grid-flow-col shadow-lg sticky top-0 bg-white">
       <div className="flex col-span-1">
         <img
           onClick={() => toggleMenuHandler()}
