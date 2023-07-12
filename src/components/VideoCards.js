@@ -23,10 +23,10 @@ const VideoCards = ({ info }) => {
   )
 };
 
-export const RedBorderVideoCard = ({info})=>{
+export const AdVideoCard = ({info})=>{
 
   return (
-    <div className="m-2 p-2 border border-red-500">
+    <div className="border border-red-500">
       <VideoCards info={info}/>
     </div>
   )
