@@ -1,7 +1,7 @@
 import React from "react";
 
 const VideoCards = ({ info }) => {
-  console.log(info);
+  // console.log(info);
 
   // const {snippet , statistics} = info;
 
@@ -22,5 +22,14 @@ const VideoCards = ({ info }) => {
     </div>
   )
 };
+
+export const RedBorderVideoCard = ({info})=>{
+
+  return (
+    <div className="m-2 p-2 border border-red-500">
+      <VideoCards info={info}/>
+    </div>
+  )
+}
 
 export default VideoCards;
