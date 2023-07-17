@@ -31,11 +31,18 @@ const Header = () => {
 
   const getSearchSuggestion = async () => {
     console.log("API -call " + searchText);
-    const data = await fetch(YOUTUBE_AUTOSUGGEST + searchText);
+    // const data = await fetch(YOUTUBE_AUTOSUGGEST + searchText);
+    const data = await fetch(`http://localhost:3001/suggestion?textSearch=${searchText}`);
+    // console.log(await data.json());
     const json = await data.json();
-    setSuggestions(json[1]);
+    console.log(json.data);
 
-    dispatch(cacheResults({ [searchText]: json[1] }));
+    const value = Object.values(json.data);
+    console.log(value);
+
+    setSuggestions(value);
+
+    dispatch(cacheResults({ [searchText]: value }));
   };
 
   const dispatch = useDispatch();
@@ -78,7 +85,7 @@ const Header = () => {
         {showSuggestions && (
           <div className="z-10 mt-2 ml-20 p-2 px-5 bg-white rounded-lg w-[37rem] shadow-lg fixed border border-gray-300">
             <ul>
-              {suggestions.map((suggestion) => (
+              {suggestions?.map((suggestion) => (
                 <li
                   key={suggestion}
                   className="shadow-md py-2 hover:bg-gray-100"
