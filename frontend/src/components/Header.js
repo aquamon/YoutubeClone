@@ -32,7 +32,7 @@ const Header = () => {
   const getSearchSuggestion = async () => {
     console.log("API -call " + searchText);
     // const data = await fetch(YOUTUBE_AUTOSUGGEST + searchText);
-    const data = await fetch(`http://localhost:3001/suggestion?textSearch=${searchText}`);
+    const data = await fetch(`https://back-7c9q.onrender.com/suggestion?textSearch=${searchText}`);
     // console.log(await data.json());
     const json = await data.json();
     console.log(json.data);
